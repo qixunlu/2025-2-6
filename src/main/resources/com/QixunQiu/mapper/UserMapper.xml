@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.QixunQiu.mapper.UserMapper">
+    <insert id="addUser">
+        insert into tb_user (UserID, Password)
+        values (#{UserID}, #{Password});
+    </insert>
+
+
+    <update id="updatePassword" >
+        update tb_user
+        <set>
+            <if test="Password != null and Password != ''">
+                Password = #{Password},
+            </if>
+        </set>
+        where UserID = #{UserID};
+    </update>
+
+    <delete id="deleteByUserID">
+        delete from tb_user where UserID = #{UserID}
+    </delete>
+
+    <select id="selectALL" resultType="com.QixunQiu.pojo.User">
+        select *
+        from tb_user ;
+    </select>
+</mapper>

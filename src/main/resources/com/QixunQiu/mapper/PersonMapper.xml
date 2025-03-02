@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.QixunQiu.mapper.PersonMapper">
+
+    <insert id="addPerson" parameterType="com.QixunQiu.pojo.Person">
+        INSERT INTO tb_person (
+            userID,
+            OlderID,
+            ProviderName,
+            Relationship,
+            OtherRelationship,
+            ContactName,
+            ContactPhone
+        ) VALUES (
+                     #{userID},
+                     #{olderID},
+                     #{providerName},
+                     #{relationship},
+                     #{otherRelationship},
+                     #{contactName},
+                     #{contactPhone}
+                 )
+    </insert>
+</mapper>

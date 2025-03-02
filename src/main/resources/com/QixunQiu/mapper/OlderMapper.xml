@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.QixunQiu.mapper.OlderMapper">
+
+    <insert id="add" parameterType="com.QixunQiu.pojo.Older">
+        INSERT INTO tb_older (
+            AssessmentID,
+            AssessmentDate,
+            AssessmentReason,
+            userID,
+            Name,
+            Gender,
+            BirthDate,
+            IDCard,
+            SocialSecurityCard,
+            Ethnicity,
+            EducationLevel,
+            Religion,
+            MaritalStatus,
+            LivingSituation,
+            PaymentMethod,
+            IncomeSource,
+            DementiaLevel,
+            MentalIllness,
+            ChronicDiseases,
+            FallIncidents,
+            LostIncidents,
+            ChokingIncidents,
+            SuicideIncidents,
+            OtherIncidents
+        ) VALUES (
+                     #{AssessmentID},
+                     #{AssessmentDate},
+                     #{AssessmentReason},
+                     #{userID},
+                     #{name},
+                     #{gender},
+                     #{birthDate},
+                     #{idCard},
+                     #{socialSecurityCard},
+                     #{ethnicity},
+                     #{educationLevel},
+                     #{religion},
+                     #{maritalStatus},
+                     #{livingSituation},
+                     #{paymentMethod},
+                     #{incomeSource},
+                     #{dementiaLevel},
+                     #{mentalIllness},
+                     #{chronicDiseases},
+                     #{fallIncidents},
+                     #{lostIncidents},
+                     #{chokingIncidents},
+                     #{suicideIncidents},
+                     #{otherIncidents}
+                 )
+    </insert>
+</mapper>

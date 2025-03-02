@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎注册</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .reg-content {
+            margin-bottom: 20px;
+        }
+        .reg-content h1 {
+            color: #333;
+            margin: 0 0 10px;
+        }
+        .reg-content a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .reg-content a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 10px 0;
+            text-align: left;
+        }
+        table td:first-child {
+            width: 30%;
+            font-weight: bold;
+        }
+        table td.input {
+            width: 70%;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+        .err_msg {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        #reg_btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #reg_btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="form-div">
+    <div class="reg-content">
+        <h1>欢迎注册</h1>
+        <a href="login.html">已有帐号？登录</a>
+    </div>
+    <form id="reg-form" action="/Older/RegisterServlet" method="post">
+        <table>
+            <tr>
+                <td>用户ID</td>
+                <td class="input">
+                    <input name="userID" type="text" id="userID">
+                    <br>
+                    <span id="username_err" class="err_msg">用户名不太受欢迎</span>
+                </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td class="input">
+                    <input name="password" type="password" id="password">
+                    <br>
+                    <span id="password_err" class="err_msg">密码格式有误</span>
+                </td>
+            </tr>
+        </table>
+        <div class="buttons">
+            <input value="注 册" type="submit" id="reg_btn">
+        </div>
+    </form>
+</div>
+</body>
+</html>

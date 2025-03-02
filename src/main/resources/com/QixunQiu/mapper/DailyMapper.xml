@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.QixunQiu.mapper.DailyMapper">
+
+    <insert id="add" parameterType="com.QixunQiu.pojo.Daily">
+        INSERT INTO tb_daily (
+            AssessmentID,
+            Eating,
+            Bathing,
+            Grooming,
+            Dressing,
+            BowelControl,
+            BladderControl,
+            Toileting,
+            BedChairTransfer,
+            Walking,
+            Stairs,
+            TotalScore,
+            ActivityLevel
+        ) VALUES (
+                     #{assessmentID},
+                     #{eating},
+                     #{bathing},
+                     #{grooming},
+                     #{dressing},
+                     #{bowelControl},
+                     #{bladderControl},
+                     #{toileting},
+                     #{bedChairTransfer},
+                     #{walking},
+                     #{stairs},
+                     #{totalScore},
+                     #{activityLevel}
+                 )
+    </insert>
+</mapper>
